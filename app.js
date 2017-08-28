@@ -7,7 +7,7 @@ var clearGrid = function() {
 
 function makeGrid(size) {
     var box = $('#container');
-    var shade = 0;
+    var shade = 50;
     var counter = 0;
     for (var y = 0; y < size; y++) {
         var row = $('<div></div>');
@@ -33,7 +33,7 @@ function makeGrid(size) {
             counter++;
         }
         box.append(row);
-        shade += 30;
+        shade = shade;
     }
 }
 
@@ -47,7 +47,13 @@ function color(colorval) {
     color = '#' + parts.join('');
 }
 
+function changeSize() {
+    size = +($('#size').val());
+    clearGrid();
+}
+
 $(document).ready(function () {
     makeGrid(size);
     $('.button, #clear').on('click', clearGrid);
+    $('#size').on('change', changeSize);
 });
