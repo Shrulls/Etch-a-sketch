@@ -1,0 +1,25 @@
+.container {
+    
+}
+
+.row {
+    position: relative;
+}
+
+.cell {
+    display: inline-block;
+    position: relative;
+    float: left;
+}
+
+.button {
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    background-color: aqua;
+    border: none;
+    outline: none;
+    margin: 1em;
+    font-size: 20px;
+    
+}
